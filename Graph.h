@@ -197,7 +197,7 @@ public:
      * @param f The function that operate on the vertex (example: printing the vertex)
      * @return The total weight of the path
      */
-    int dijkstra(bool debug = false, void (*f)(char, int) = Graph::printVertexWithWeight) const;
+    int dijkstra(char startingVertex = 'A', bool debug = false, void (*f)(char, int) = Graph::printVertexWithWeight) const;
 
     /**
      * TO-FIX: Do not work properly

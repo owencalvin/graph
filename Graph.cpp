@@ -443,11 +443,11 @@ int Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, voi
 
 // region Dijkstra
 
-int Graph::dijkstra(bool debug, void (*f)(char, int)) const {
+int Graph::dijkstra(char startingVertex, bool debug, void (*f)(char, int)) const {
     bool *visited = Utils::initArray<bool>(false, this->size);
     bool *met = Utils::initArray<bool>(false, this->size);
 
-    int weight = dijkstraVertexVisit(0, visited, met, debug, f);
+    int weight = dijkstraVertexVisit(Utils::getIndexInAlphabet(startingVertex), visited, met, debug, f);
 
     delete[] visited;
     delete[] met;

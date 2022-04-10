@@ -29,7 +29,7 @@ void printGraph(const Graph& g) {
     cout << "Prim total weight: " << primWeight << endl;
 
     cout << endl << "Dijkstra: " << endl;
-    int dijkstraWeight = g.dijkstra(true);
+    int dijkstraWeight = g.dijkstra('A', true);
     cout << "Dijkstra total weight: " << dijkstraWeight << endl;
 
     cout << endl << "Raw matrix (https://graphonline.ru/en/create_graph_by_matrix): " << endl << g.rawMatrixString();
