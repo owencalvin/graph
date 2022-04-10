@@ -426,10 +426,7 @@ void Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, vo
         }
 
         if (debug) {
-            cout << mh;
-            if (mh.getSize() > 1) {
-                cout << endl;
-            }
+            cout << mh << endl;
         }
     }
 }
@@ -484,10 +481,7 @@ void Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug
         }
 
         if (debug) {
-            cout << mh;
-            if (mh.getSize() > 1) {
-                cout << endl;
-            }
+            cout << mh << endl;
         }
     }
 }

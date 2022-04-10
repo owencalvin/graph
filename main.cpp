@@ -42,7 +42,7 @@ void printPrimGraph() {
     cout << endl << endl << "Prim: " << endl;
     g.prim(true);
 
-    cout << endl << endl << "Dijkstra: " << endl;
+    cout << endl << "Dijkstra: " << endl;
     g.dijkstra(true);
 
     cout << endl << endl << endl;
@@ -69,11 +69,10 @@ void printEx1() {
 
 void printFileGraphs() {
     Graph g = Graph("graphs/graph1.txt");
-    cout << g;
-    cout << endl << endl << endl;
-
-    Graph g2 = Graph("graphs/graph2.txt");
-    cout << g2;
+    cout << g << endl << endl;
+    g.prim(true);
+    cout << endl;
+    g.dijkstra(true);
     cout << endl << endl << endl;
 }
 
