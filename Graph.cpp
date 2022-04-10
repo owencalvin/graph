@@ -199,7 +199,7 @@ bool Graph::isConnected() const {
     return true;
 }
 
-// region recursive depth-first search
+// region Recursive depth-first search
 
 void Graph::recursiveDepthFirstSearch(void (*f)(char)) const {
     bool *visited = Utils::initArray<bool>(false, this->size);
@@ -231,7 +231,7 @@ void Graph::recursiveDepthFirstVertexVisit(int vertex, bool *visited, void (*f)(
 
 // endregion
 
-// region iterative depth-first search
+// region Iterative depth-first search
 
 void Graph::iterativeDepthFirstSearch(void (*f)(char)) const {
     bool *visited = Utils::initArray(false, this->size);
@@ -276,7 +276,7 @@ void Graph::iterativeDepthFirstVertexVisit(int vertex, bool *visited, bool *met,
 
 // endregion
 
-// region iterative breadth-first search
+// region Iterative breadth-first search
 
 void Graph::iterativeBreadthFirstSearch(void (*f)(char)) const {
     bool *visited = Utils::initArray(false, this->size);
@@ -321,7 +321,7 @@ void Graph::iterativeBreadthFirstVertexVisit(int vertex, bool *visited, bool *me
 
 // endregion
 
-// region iterative priority-first search
+// region Iterative priority-first search
 
 void Graph::iterativePriorityFirstSearch(int priority, void (*f)(char)) const {
     bool *visited = Utils::initArray(false, this->size);
