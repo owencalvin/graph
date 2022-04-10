@@ -43,9 +43,9 @@ Graph::Graph(const string& path) {
             vector<string> args = Utils::split(line, " ");
 
             if (args.size() == 3) {
-                this->addOrientedGraph(args[0][0], args[1][0], stoi(args[2]));
+                this->addOrientedArc(args[0][0], args[1][0], stoi(args[2]));
             } else if (args.size() == 2) {
-                this->addOrientedGraph(args[0][0], args[1][0], 1);
+                this->addOrientedArc(args[0][0], args[1][0], 1);
             } else {
                 throw runtime_error("Your file isn't formatted correctly (" + path + ")");
             }
@@ -130,7 +130,7 @@ void Graph::addArcs(char i, const int* weights) {
     }
 }
 
-void Graph::addOrientedGraph(char i, char j, int p) {
+void Graph::addOrientedArc(char i, char j, int p) {
     const unsigned int iInt = Utils::getIndexInAlphabet(i);
     const unsigned int jInt = Utils::getIndexInAlphabet(j);
 

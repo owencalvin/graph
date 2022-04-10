@@ -69,10 +69,25 @@ void printEx1() {
 
 void printFileGraphs() {
     Graph g = Graph("graphs/graph1.txt");
-    cout << g << endl << endl;
-    g.prim(true);
-    cout << endl;
-    g.dijkstra(true);
+
+    cout << "First graph g:";
+    cout << g << endl;
+
+    cout << "Recursive depth first: ";
+    g.recursiveDepthFirstSearch();
+
+    cout << endl << "Iterative depth first: ";
+    g.iterativeDepthFirstSearch();
+
+    cout << endl << "Iterative breadth first: ";
+    g.iterativeBreadthFirstSearch();
+
+    cout << endl << "Iterative priority first (=== depth first): ";
+    g.iterativePriorityFirstSearch(-1);
+
+    cout << endl << "Iterative priority first (=== breadth first): ";
+    g.iterativePriorityFirstSearch(1);
+
     cout << endl << endl << endl;
 }
 

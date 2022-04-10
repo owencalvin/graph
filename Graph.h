@@ -129,7 +129,7 @@ public:
      * @param j The second vertex
      * @param p The weight of the arc
      */
-    void addOrientedGraph(char i, char j, int p = 1);
+    void addOrientedArc(char i, char j, int p = 1);
 
     /**
      * Get the degree of a vertex
