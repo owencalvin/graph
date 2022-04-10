@@ -193,6 +193,7 @@ public:
 
     /**
      * Dijkstra tree algorithm
+     * @param startingVertex Specify the vertex where the algorithm should start
      * @param debug Print the neighbour vertices with their priority at each iteration
      * @param f The function that operate on the vertex (example: printing the vertex)
      * @return The total weight of the path
