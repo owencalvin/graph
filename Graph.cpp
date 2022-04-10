@@ -93,6 +93,14 @@ void Graph::addArc(char i, char j, int p) {
     this->matrix[jInt][iInt] = p;
 }
 
+void Graph::addArcs(char i, const int* weights) {
+    const unsigned int iInt = Utils::getIndexInAlphabet(i);
+
+    for (int x = 0; x < this->size - 1; x++) {
+        this->matrix[iInt][x] = weights[x];
+    }
+}
+
 void Graph::addOrientedGraph(char i, char j, int p) {
     const unsigned int iInt = Utils::getIndexInAlphabet(i);
     const unsigned int jInt = Utils::getIndexInAlphabet(j);

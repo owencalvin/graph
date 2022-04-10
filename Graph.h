@@ -95,6 +95,18 @@ public:
     void addArc(char i, char j, int p = 1);
 
     /**
+     * Add arcs from one vertex to all the other vertices in the graph
+     * g.addArcs('A', { 0, 1, 2, 3, 4, 5 }) means:
+     *
+     *     A B C D E F
+     * A:  0 1 2 3 4 5
+     *
+     * @param i The first vertex
+     * @param weights The weights array, must have a length of your graph size
+     */
+    void addArcs(char i, const int* weights);
+
+    /**
      * Add an arc that is oriented, from i to j but not from j to i
      * @param i The first vertex
      * @param j The second vertex

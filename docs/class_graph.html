@@ -93,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab7136b110ea62bec413f2d359f2b6dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56824a4a2a4ce54bab948c7f23755de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a56824a4a2a4ce54bab948c7f23755de3">addArc</a> (char i, char j, int p=1)</td></tr>
 <tr class="separator:a56824a4a2a4ce54bab948c7f23755de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c9ab7622b0a617d6b4c99ac4d226a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a34c9ab7622b0a617d6b4c99ac4d226a7">addArcs</a> (char i, const int *weights)</td></tr>
+<tr class="separator:a34c9ab7622b0a617d6b4c99ac4d226a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8fa809db0138b0016b9f92886299717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#af8fa809db0138b0016b9f92886299717">addOrientedGraph</a> (char i, char j, int p=1)</td></tr>
 <tr class="separator:af8fa809db0138b0016b9f92886299717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fbda479ac96ef1469b45deaad654ecd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a3fbda479ac96ef1469b45deaad654ecd">degree</a> (char i) const</td></tr>
@@ -203,6 +205,43 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
     <tr><td class="paramname">i</td><td>The first vertex </td></tr>
     <tr><td class="paramname">j</td><td>The second vertex </td></tr>
     <tr><td class="paramname">p</td><td>The weight of the arc </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a34c9ab7622b0a617d6b4c99ac4d226a7" name="a34c9ab7622b0a617d6b4c99ac4d226a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c9ab7622b0a617d6b4c99ac4d226a7">&#9670;&nbsp;</a></span>addArcs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::addArcs </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>weights</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Add arcs from one vertex to all the other vertices in the graph g.addArcs('A', { 0, 1, 2, 3, 4, 5 }) means: </p><pre class="fragment">A B C D E F
+</pre><p> A: 0 1 2 3 4 5</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>The first vertex </td></tr>
+    <tr><td class="paramname">weights</td><td>The weights array, must have a length of your graph size </td></tr>
   </table>
   </dd>
 </dl>

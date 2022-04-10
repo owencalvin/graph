@@ -57,10 +57,21 @@ void printHenriqueGraph() {
     cout << endl << endl << endl;
 }
 
+void printEx1() {
+    const Graph g = Graphs::ex11();
+
+    cout << "Ex11 g:";
+    cout << g << endl;
+    cout << g.rawMatrixString();
+
+    cout << endl << endl << endl;
+}
+
 int main() {
     printBasicGraph();
     printPrimGraph();
     printHenriqueGraph();
+    printEx1();
 
     return 0;
 }
