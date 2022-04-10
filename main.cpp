@@ -9,9 +9,7 @@ void printBasicGraph() {
     const Graph g = Graphs::getBasicGraph();
 
     cout << "First graph g:";
-    cout << g << endl;
-
-    cout << "Degrees: " << endl << g.degreesToSring();
+    cout << g;
 
     cout << "Recursive depth first: ";
     g.recursiveDepthFirstSearch();

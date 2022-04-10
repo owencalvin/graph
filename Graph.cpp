@@ -60,7 +60,8 @@ string Graph::getInfos() const {
     ss << "Size: " << to_string(this->getSize()) << endl;
     ss << "Is weighted: " << Utils::boolToYesNo(this->isWeighted()) << endl;
     ss << "Is directed: " << Utils::boolToYesNo(this->isDirected()) << endl;
-    ss << "Is connected: " <<  Utils::boolToYesNo(this->isConnected());
+    ss << "Is connected: " <<  Utils::boolToYesNo(this->isConnected()) << endl;
+    ss << "Degrees: " << endl << this->degreesToSring();
 
     return ss.str();
 }
