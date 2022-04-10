@@ -18,10 +18,10 @@ void printGraph(const Graph& g) {
     cout << endl << "Iterative breadth first: ";
     g.iterativeBreadthFirstSearch();
 
-    cout << endl << "Iterative priority first (=== depth first): ";
+    cout << endl << "Iterative depth first (with priority first search): ";
     g.iterativePriorityFirstSearch(-1);
 
-    cout << endl << "Iterative priority first (=== breadth first): ";
+    cout << endl << "Iterative breadth first (with priority first search): ";
     g.iterativePriorityFirstSearch(1);
 
     cout << endl << endl << "Prim: " << endl;
