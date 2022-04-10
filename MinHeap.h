@@ -69,6 +69,12 @@ public:
     int getIndexByValue(int value);
 
     /**
+     * Get a pair reference by it's value
+     * @param value The value to find
+     */
+    pair<int, int> *getReferenceByValue(int value);
+
+    /**
      * In french: "RendreMinimier"
      */
     void siftUp();

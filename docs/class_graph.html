@@ -115,10 +115,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5dd3d4703cf39abae764c1138bee8945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8850a36471e1bfb94661036240861f50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8850a36471e1bfb94661036240861f50">iterativePriorityFirstSearch</a> (int priority=-1, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
 <tr class="separator:a8850a36471e1bfb94661036240861f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67d5895a10b89f36ed47b05cd8920eba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a67d5895a10b89f36ed47b05cd8920eba">prim</a> (bool debug=false, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
-<tr class="separator:a67d5895a10b89f36ed47b05cd8920eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4d4c52330e1af9be4df780f675b2566"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ae4d4c52330e1af9be4df780f675b2566">dijkstra</a> (bool debug=false, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
-<tr class="separator:ae4d4c52330e1af9be4df780f675b2566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeefdf475f9cd721a461d2db18707cb0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aeefdf475f9cd721a461d2db18707cb0e">prim</a> (bool debug=false, void(*f)(char, int)=<a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">Graph::printVertexWithWeight</a>) const</td></tr>
+<tr class="separator:aeefdf475f9cd721a461d2db18707cb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587480276c404af360dc83ff243ace58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a587480276c404af360dc83ff243ace58">dijkstra</a> (bool debug=false, void(*f)(char, int)=<a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">Graph::printVertexWithWeight</a>) const</td></tr>
+<tr class="separator:a587480276c404af360dc83ff243ace58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29af32108929c0ea70f7fed63f399ac5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a29af32108929c0ea70f7fed63f399ac5">connectedVertices</a> (void(*f)(vector&lt; char &gt;)=<a class="el" href="class_graph.html#af412a7e1194d902dc827250dade10f02">Graph::printVertices</a>) const</td></tr>
 <tr class="separator:a29af32108929c0ea70f7fed63f399ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -126,6 +126,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a87e28713b6fd2ccb3acafc64c603d9cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">printVertex</a> (char vertex)</td></tr>
 <tr class="separator:a87e28713b6fd2ccb3acafc64c603d9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1ee698b4bc48ffb646abc27288ffdc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">printVertexWithWeight</a> (char vertex, int weight)</td></tr>
+<tr class="separator:a2f1ee698b4bc48ffb646abc27288ffdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af412a7e1194d902dc827250dade10f02"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#af412a7e1194d902dc827250dade10f02">printVertices</a> (vector&lt; char &gt; verticesIDs)</td></tr>
 <tr class="separator:af412a7e1194d902dc827250dade10f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -397,8 +399,8 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 
 </div>
 </div>
-<a id="ae4d4c52330e1af9be4df780f675b2566" name="ae4d4c52330e1af9be4df780f675b2566"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4d4c52330e1af9be4df780f675b2566">&#9670;&nbsp;</a></span>dijkstra()</h2>
+<a id="a587480276c404af360dc83ff243ace58" name="a587480276c404af360dc83ff243ace58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587480276c404af360dc83ff243ace58">&#9670;&nbsp;</a></span>dijkstra()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,8 +414,8 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(char)&#160;</td>
-          <td class="paramname"><em>f</em> = <code><a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a></code>&#160;</td>
+          <td class="paramtype">void(*)(char, int)&#160;</td>
+          <td class="paramname"><em>f</em> = <code><a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">Graph::printVertexWithWeight</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -624,8 +626,8 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 
 </div>
 </div>
-<a id="a67d5895a10b89f36ed47b05cd8920eba" name="a67d5895a10b89f36ed47b05cd8920eba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67d5895a10b89f36ed47b05cd8920eba">&#9670;&nbsp;</a></span>prim()</h2>
+<a id="aeefdf475f9cd721a461d2db18707cb0e" name="aeefdf475f9cd721a461d2db18707cb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeefdf475f9cd721a461d2db18707cb0e">&#9670;&nbsp;</a></span>prim()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,8 +641,8 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(char)&#160;</td>
-          <td class="paramname"><em>f</em> = <code><a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a></code>&#160;</td>
+          <td class="paramtype">void(*)(char, int)&#160;</td>
+          <td class="paramname"><em>f</em> = <code><a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">Graph::printVertexWithWeight</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -684,6 +686,48 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 </table>
 </div><div class="memdoc">
 <p >Print a vertex to the console </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex</td><td>The vertex char </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f1ee698b4bc48ffb646abc27288ffdc" name="a2f1ee698b4bc48ffb646abc27288ffdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1ee698b4bc48ffb646abc27288ffdc">&#9670;&nbsp;</a></span>printVertexWithWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Graph::printVertexWithWeight </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>vertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Print a vertex to the console with it's weight </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertex</td><td>The vertex char </td></tr>
   </table>

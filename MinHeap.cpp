@@ -71,6 +71,10 @@ int MinHeap::getIndexByValue(int value) {
     return -1;
 }
 
+pair<int, int> *MinHeap::getReferenceByValue(int value) {
+    return &this->heap[this->getIndexByValue(value)];
+}
+
 void MinHeap::siftUp() {
     unsigned int index = 1;
     bool done = false;

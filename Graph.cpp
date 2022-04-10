@@ -480,7 +480,7 @@ int Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug,
         for (int i = 0; i < this->size; i++) {
             if (this->matrix[vertex][i] != 0) {
                 if (!visited[i]) {
-                    int currentPriority = this->matrix[vertex][i];
+                    int currentPriority = mh.getReferenceByValue(i)->first;
                     int newPriority = priority + this->matrix[vertex][i];
 
                     if (!met[i]) {

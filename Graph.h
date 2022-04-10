@@ -28,9 +28,9 @@ private:
     void iterativePriorityFirstVertexVisit(int vertex, bool visited[], bool met[], void (*f)(char), int *priorityBase,
                                            int priority) const;
 
-    int primVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int i)) const;
+    int primVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int)) const;
 
-    int dijkstraVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int i)) const;
+    int dijkstraVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int)) const;
 
     int visitConnectedVertex(int vertex, int mark[], int *n, stack<int> *q, void (*f)(vector<char>)) const;
 
