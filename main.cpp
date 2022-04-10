@@ -11,7 +11,7 @@ void printBasicGraph() {
     cout << "First graph g:";
     cout << g << endl;
 
-    cout << "Degrees: " << endl << g.getAllDegrees();
+    cout << "Degrees: " << endl << g.degreesToSring();
 
     cout << "Recursive depth first: ";
     g.recursiveDepthFirstSearch();

@@ -65,7 +65,7 @@ string Graph::getInfos() const {
     return ss.str();
 }
 
-string Graph::getAllDegrees() const {
+string Graph::degreesToSring() const {
     stringstream ss;
 
     for (int i = 0; i < this->size; i++) {

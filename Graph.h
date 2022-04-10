@@ -65,7 +65,7 @@ public:
      * Get the degrees representation for each vertex as a string
      * @return The degrees representation as a string
      */
-    string getAllDegrees() const;
+    string degreesToSring() const;
 
     /**
      * Get the size of your graph
