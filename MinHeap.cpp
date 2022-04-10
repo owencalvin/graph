@@ -98,3 +98,7 @@ void MinHeap::siftUp() {
 bool MinHeap::empty() {
     return this->heap.size() <= 1;
 }
+
+unsigned int MinHeap::getSize() const {
+    return this->heap.size() - 1;
+}

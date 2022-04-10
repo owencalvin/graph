@@ -51,6 +51,21 @@ public:
     static string matrixToStringCharVertex(int **matrix, int size);
 
     /**
+     * Return the matrix as raw string to use it for tools like: https://graphonline.ru/en/create_graph_by_matrix
+     * @param matrix The matrix (2D int array)
+     * @param size The size of the matrix
+     * @return The raw string representation of the matrix
+     */
+    static string matrixToRawString(int **matrix, int size, string separator);
+
+    /**
+     * Get the alphabet as a string representation
+     * @param max The max number of letters
+     * @return The alphabet letters
+     */
+    static string getAlphabet(int max = 26);
+
+    /**
      * Convert a boolean value to "yes" or "no"
      * @param value The boolean value
      * @return The english representation of a boolean value ("yes" or "no") as string

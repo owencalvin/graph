@@ -56,22 +56,30 @@ string Graph::toStringCharVertex() const {
 string Graph::getInfos() const {
     stringstream ss;
 
-    ss << Utils::matrixToStringCharVertex(this->matrix, this->size);
+    ss << Utils::matrixToStringCharVertex(this->matrix, this->size) << endl;
     ss << "Size: " << to_string(this->getSize()) << endl;
     ss << "Is weighted: " << Utils::boolToYesNo(this->isWeighted()) << endl;
     ss << "Is directed: " << Utils::boolToYesNo(this->isDirected()) << endl;
     ss << "Is connected: " <<  Utils::boolToYesNo(this->isConnected()) << endl;
-    ss << "Degrees: " << endl << this->degreesToSring();
+    ss << "Degrees: " << endl << this->degreesToString();
 
     return ss.str();
 }
 
-string Graph::degreesToSring() const {
+string Graph::rawMatrixString(string separator) const {
+    return Utils::matrixToRawString(this->matrix, this->size, separator);
+}
+
+string Graph::degreesToString() const {
     stringstream ss;
 
     for (int i = 0; i < this->size; i++) {
         char letter = Utils::getLetterFromAlphabetIndex(i);
-        ss << letter << ": " << this->degree(letter) << endl;
+        ss << letter << ": " << this->degree(letter);
+
+        if (i < size - 1) {
+            ss << endl;
+        }
     }
 
     return ss.str();
@@ -381,7 +389,10 @@ void Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, vo
         }
 
         if (debug) {
-            cout << mh << endl;
+            cout << mh;
+            if (mh.getSize() > 1) {
+                cout << endl;
+            }
         }
     }
 }
@@ -436,7 +447,10 @@ void Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug
         }
 
         if (debug) {
-            cout << mh << endl;
+            cout << mh;
+            if (mh.getSize() > 1) {
+                cout << endl;
+            }
         }
     }
 }

@@ -79,6 +79,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a8dd5326dc328e8e5ff395eafe13a9b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8845ca4a5eef3df2d07891acc5413cae"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a8845ca4a5eef3df2d07891acc5413cae">matrixToStringCharVertex</a> (int **matrix, int size)</td></tr>
 <tr class="separator:a8845ca4a5eef3df2d07891acc5413cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e221a9dd21ff2a9bc54812fc17d811"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a49e221a9dd21ff2a9bc54812fc17d811">matrixToRawString</a> (int **matrix, int size, string separator)</td></tr>
+<tr class="separator:a49e221a9dd21ff2a9bc54812fc17d811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320afe4376a3d5b000e24ab2c4539260"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a320afe4376a3d5b000e24ab2c4539260">getAlphabet</a> (int max=26)</td></tr>
+<tr class="separator:a320afe4376a3d5b000e24ab2c4539260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74f265b26625418255606f6ccd2e1538"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a74f265b26625418255606f6ccd2e1538">boolToYesNo</a> (bool value)</td></tr>
 <tr class="separator:a74f265b26625418255606f6ccd2e1538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3c061944240a216cbf7d62b168e0fe"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
@@ -119,6 +123,39 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The english representation of a boolean value ("yes" or "no") as string </dd></dl>
+
+</div>
+</div>
+<a id="a320afe4376a3d5b000e24ab2c4539260" name="a320afe4376a3d5b000e24ab2c4539260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320afe4376a3d5b000e24ab2c4539260">&#9670;&nbsp;</a></span>getAlphabet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Utils::getAlphabet </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em> = <code>26</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Get the alphabet as a string representation </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>The max number of letters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The alphabet letters </dd></dl>
 
 </div>
 </div>
@@ -237,6 +274,56 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The array of type T with the specified size filled with the default value </dd></dl>
+
+</div>
+</div>
+<a id="a49e221a9dd21ff2a9bc54812fc17d811" name="a49e221a9dd21ff2a9bc54812fc17d811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e221a9dd21ff2a9bc54812fc17d811">&#9670;&nbsp;</a></span>matrixToRawString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Utils::matrixToRawString </td>
+          <td>(</td>
+          <td class="paramtype">int **&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>separator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Return the matrix as raw string to use it for tools like: <a href="https://graphonline.ru/en/create_graph_by_matrix">https://graphonline.ru/en/create_graph_by_matrix</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>The matrix (2D int array) </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The raw string representation of the matrix </dd></dl>
 
 </div>
 </div>

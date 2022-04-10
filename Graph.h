@@ -62,10 +62,17 @@ public:
     string getInfos() const;
 
     /**
+     * Return the matrix as raw string to use it for tools like: https://graphonline.ru/en/create_graph_by_matrix
+     * @param separator The separator between each values
+     * @return The raw string matrix
+     */
+    string rawMatrixString(string separator = ",") const;
+
+    /**
      * Get the degrees representation for each vertex as a string
      * @return The degrees representation as a string
      */
-    string degreesToSring() const;
+    string degreesToString() const;
 
     /**
      * Get the size of your graph

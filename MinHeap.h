@@ -21,7 +21,13 @@ public:
 
     friend ostream &operator<<(ostream &os, const MinHeap &mh);
 
-    string toString() const ;
+    string toString() const;
+
+    /**
+     * Get the size of the heap
+     * @return The size of the heap
+     */
+    unsigned int getSize() const;
 
     /**
      * Determines if the heap is empty

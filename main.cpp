@@ -2,6 +2,7 @@
 #include <vector>
 #include "Graph.h"
 #include "Graphs.h"
+#include "Utils.h"
 
 using namespace std;
 
@@ -10,6 +11,9 @@ void printBasicGraph() {
 
     cout << "First graph g:";
     cout << g;
+
+    cout << endl << "Raw matrix: " << endl;
+    cout << g.rawMatrixString() << endl;
 
     cout << "Recursive depth first: ";
     g.recursiveDepthFirstSearch();
@@ -35,10 +39,10 @@ void printPrimGraph() {
     cout << "Second graph g:";
     cout << g;
 
-    cout << endl << "Prim: " << endl;
+    cout << endl << endl << "Prim: " << endl;
     g.prim(true);
 
-    cout << endl << "Dijkstra: " << endl;
+    cout << endl << endl << "Dijkstra: " << endl;
     g.dijkstra(true);
 
     cout << endl << endl << endl;

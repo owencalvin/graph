@@ -6,50 +6,52 @@
 #include "Utils.h"
 
 string Utils::matrixToStringIntVertex(int **matrix, int size) {
-    int size_str_length = to_string(size).length();
+    int sizeStrLength = to_string(size).length();
     stringstream ss;
 
     ss << endl << "     ";
 
-    stringstream first_line;
+    stringstream firstLine;
     for (int i = 0; i < size; i++) {
-        first_line << setfill('0') << setw(size_str_length) << i << "  ";
+        firstLine << setfill('0') << setw(sizeStrLength) << i << "  ";
     }
 
-    ss << first_line.str() << std::endl << "  ";
+    ss << firstLine.str() << std::endl << "  ";
 
-    ss << setfill(' ') << setw(size_str_length) << "";
-    ss << setfill('-') << setw(first_line.str().length()) << "";
+    ss << setfill(' ') << setw(sizeStrLength) << "";
+    ss << setfill('-') << setw(firstLine.str().length()) << "";
 
     ss << endl;
 
     for (int i = 0; i < size; i++) {
-        ss << setfill('0') << setw(size_str_length) << i << " |  ";
+        ss << setfill('0') << setw(sizeStrLength) << i << " |  ";
 
         for (int j = 0; j < size; ++j) {
             ss << matrix[i][j] << "  ";
-            ss << setfill(' ') << setw(size_str_length);
+            ss << setfill(' ') << setw(sizeStrLength);
         }
 
-        ss << endl;
+        if (i < size - 1) {
+            ss << endl;
+        }
     }
 
     return ss.str();
 }
 
 string Utils::matrixToStringCharVertex(int **matrix, int size) {
-    int size_str_length = to_string(size).length();
+    int sizeStrLength = to_string(size).length();
     stringstream ss;
 
     ss << endl << "      ";
 
-    stringstream first_line;
+    stringstream firstLine;
     for (int i = 0; i < size; i++) {
-        first_line << Utils::getLetterFromAlphabetIndex(i) << "   ";
+        firstLine << Utils::getLetterFromAlphabetIndex(i) << "   ";
     }
 
-    ss << first_line.str() << std::endl << "    ";
-    ss << setfill('-') << setw(first_line.str().length()) << "";
+    ss << firstLine.str() << std::endl << "    ";
+    ss << setfill('-') << setw(firstLine.str().length()) << "";
 
     ss << endl << " ";
 
@@ -58,10 +60,46 @@ string Utils::matrixToStringCharVertex(int **matrix, int size) {
 
         for (int j = 0; j < size; ++j) {
             ss << matrix[i][j] << "  ";
-            ss << setfill(' ') << setw(size_str_length);
+            ss << setfill(' ') << setw(sizeStrLength);
         }
 
-        ss << endl;
+        if (i < size - 1) {
+            ss << endl;
+        }
+    }
+
+    return ss.str();
+}
+
+string Utils::matrixToRawString(int **matrix, int size, string separator) {
+    stringstream ss;
+
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; ++j) {
+            ss << matrix[i][j];
+
+            if (j < size - 1) {
+                ss << separator;
+            }
+        }
+
+        if (i < size - 1) {
+            ss << endl;
+        }
+    }
+
+    return ss.str();
+}
+
+string Utils::getAlphabet(int max) {
+    stringstream ss;
+
+    for (int i = 0; i < max; i++) {
+        ss << Utils::getLetterFromAlphabetIndex(i);
+
+        if (i < max - 1) {
+            ss << endl;
+        }
     }
 
     return ss.str();

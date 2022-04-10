@@ -83,8 +83,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2fbc9d480790b031e36653ebdf906202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7dc2301be1019abd3e9954e86aa89e5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ae7dc2301be1019abd3e9954e86aa89e5">getInfos</a> () const</td></tr>
 <tr class="separator:ae7dc2301be1019abd3e9954e86aa89e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a631c72334d5f98921e56716888ff78f9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a631c72334d5f98921e56716888ff78f9">degreesToSring</a> () const</td></tr>
-<tr class="separator:a631c72334d5f98921e56716888ff78f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cba175847584558f150a1da1df13ecd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a4cba175847584558f150a1da1df13ecd">rawMatrixString</a> (string separator=&quot;,&quot;) const</td></tr>
+<tr class="separator:a4cba175847584558f150a1da1df13ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1087f179983c52a01ea81a4cddfc30a1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a1087f179983c52a01ea81a4cddfc30a1">degreesToString</a> () const</td></tr>
+<tr class="separator:a1087f179983c52a01ea81a4cddfc30a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe53f5d640fd633e100aa77c6e714f41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#abe53f5d640fd633e100aa77c6e714f41">getSize</a> () const</td></tr>
 <tr class="separator:abe53f5d640fd633e100aa77c6e714f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7136b110ea62bec413f2d359f2b6dfe"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ab7136b110ea62bec413f2d359f2b6dfe">getMatrix</a> () const</td></tr>
@@ -298,14 +300,14 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 
 </div>
 </div>
-<a id="a631c72334d5f98921e56716888ff78f9" name="a631c72334d5f98921e56716888ff78f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a631c72334d5f98921e56716888ff78f9">&#9670;&nbsp;</a></span>degreesToSring()</h2>
+<a id="a1087f179983c52a01ea81a4cddfc30a1" name="a1087f179983c52a01ea81a4cddfc30a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1087f179983c52a01ea81a4cddfc30a1">&#9670;&nbsp;</a></span>degreesToString()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string Graph::degreesToSring </td>
+          <td class="memname">string Graph::degreesToString </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -638,6 +640,31 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4cba175847584558f150a1da1df13ecd" name="a4cba175847584558f150a1da1df13ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cba175847584558f150a1da1df13ecd">&#9670;&nbsp;</a></span>rawMatrixString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Graph::rawMatrixString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>separator</em> = <code>&quot;,&quot;</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Return the matrix as raw string to use it for tools like: <a href="https://graphonline.ru/en/create_graph_by_matrix">https://graphonline.ru/en/create_graph_by_matrix</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">separator</td><td>The separator between each values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The raw string matrix </dd></dl>
 
 </div>
 </div>
