@@ -70,9 +70,9 @@ void printEx1() {
 void printFileGraphs() {
     Graph g = Graph("graphs/graph1.txt");
     cout << g << endl << endl;
-    g.prim(true);
+    g.prim();
     cout << endl;
-    g.dijkstra(true);
+    g.dijkstra();
     cout << endl << endl << endl;
 }
 
