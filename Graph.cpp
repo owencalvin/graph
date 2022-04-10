@@ -379,7 +379,7 @@ void Graph::iterativePriorityFirstVertexVisit(int vertex, bool *visited, bool *m
 
 // region Prim
 
-int Graph::prim(bool debug, void (*f)(char)) const {
+int Graph::prim(bool debug, void (*f)(char, int)) const {
     bool *visited = Utils::initArray(false, this->size);
     bool *met = Utils::initArray(false, this->size);
     int weight = 0;
@@ -394,7 +394,7 @@ int Graph::prim(bool debug, void (*f)(char)) const {
     return weight;
 }
 
-int Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, void (*f)(char)) const {
+int Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, void (*f)(char, int)) const {
     int weight = 0;
 
     if (visited[vertex]) {
@@ -413,7 +413,7 @@ int Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, voi
 
         if (f != nullptr) {
             weight += priority;
-            f(Utils::getLetterFromAlphabetIndex(vertex));
+            f(Utils::getLetterFromAlphabetIndex(vertex), priority);
         }
 
         for (int i = 0; i < this->size; i++) {
@@ -443,7 +443,7 @@ int Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, voi
 
 // region Dijkstra
 
-int Graph::dijkstra(bool debug, void (*f)(char)) const {
+int Graph::dijkstra(bool debug, void (*f)(char, int)) const {
     bool *visited = Utils::initArray<bool>(false, this->size);
     bool *met = Utils::initArray<bool>(false, this->size);
 
@@ -455,7 +455,7 @@ int Graph::dijkstra(bool debug, void (*f)(char)) const {
     return weight;
 }
 
-int Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug, void (*f)(char)) const {
+int Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug, void (*f)(char, int)) const {
     int weight = 0;
 
     if (visited[vertex]) {
@@ -474,7 +474,7 @@ int Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug,
 
         if (f != nullptr) {
             weight += priority;
-            f(Utils::getLetterFromAlphabetIndex(vertex));
+            f(Utils::getLetterFromAlphabetIndex(vertex), priority);
         }
 
         for (int i = 0; i < this->size; i++) {

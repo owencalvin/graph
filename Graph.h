@@ -28,9 +28,9 @@ private:
     void iterativePriorityFirstVertexVisit(int vertex, bool visited[], bool met[], void (*f)(char), int *priorityBase,
                                            int priority) const;
 
-    int primVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char)) const;
+    int primVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int i)) const;
 
-    int dijkstraVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char)) const;
+    int dijkstraVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int i)) const;
 
     int visitConnectedVertex(int vertex, int mark[], int *n, stack<int> *q, void (*f)(vector<char>)) const;
 
@@ -189,7 +189,7 @@ public:
      * @param f The function that operate on the vertex (example: printing the vertex)
      * @return The total weight of the path
      */
-    int prim(bool debug = false, void (*f)(char) = Graph::printVertex) const;
+    int prim(bool debug = false, void (*f)(char, int) = Graph::printVertexWithWeight) const;
 
     /**
      * Dijkstra tree algorithm
@@ -197,7 +197,7 @@ public:
      * @param f The function that operate on the vertex (example: printing the vertex)
      * @return The total weight of the path
      */
-    int dijkstra(bool debug = false, void (*f)(char) = Graph::printVertex) const;
+    int dijkstra(bool debug = false, void (*f)(char, int) = Graph::printVertexWithWeight) const;
 
     /**
      * TO-FIX: Do not work properly
@@ -212,6 +212,14 @@ public:
      */
     static void printVertex(char vertex) {
         cout << vertex << " ";
+    }
+
+    /**
+     * Print a vertex to the console with it's weight
+     * @param vertex The vertex char
+     */
+    static void printVertexWithWeight(char vertex, int weight) {
+        cout << "(" << vertex << ", " << weight << ") | ";
     }
 
     /**
