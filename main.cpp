@@ -11,11 +11,7 @@ void printBasicGraph() {
     cout << "First graph g:";
     cout << g << endl;
 
-    cout << "Degree of A: " << g.degree('A') << endl;
-
-    cout << "Connected vertices: ";
-    g.connectedVertices();
-    cout << endl;
+    cout << "Degrees: " << endl << g.getAllDegrees();
 
     cout << "Recursive depth first: ";
     g.recursiveDepthFirstSearch();

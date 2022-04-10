@@ -62,6 +62,12 @@ public:
     string getInfos() const;
 
     /**
+     * Get the degrees representation for each vertex as a string
+     * @return The degrees representation as a string
+     */
+    string getAllDegrees() const;
+
+    /**
      * Get the size of your graph
      * @return The size of your graph
      */

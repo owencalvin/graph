@@ -32,12 +32,17 @@ Graph::~Graph() {
     }
 }
 
-int Graph::getSize() const {
-    return this->size;
+ostream &operator<<(ostream &os, const Graph &graph) {
+    os << graph.getInfos();
+    return os;
 }
 
 int **Graph::getMatrix() const {
     return this->matrix;
+}
+
+int Graph::getSize() const {
+    return this->size;
 }
 
 string Graph::toStringIntVertex() const {
@@ -60,9 +65,15 @@ string Graph::getInfos() const {
     return ss.str();
 }
 
-ostream &operator<<(ostream &os, const Graph &graph) {
-    os << graph.getInfos();
-    return os;
+string Graph::getAllDegrees() const {
+    stringstream ss;
+
+    for (int i = 0; i < this->size; i++) {
+        char letter = Utils::getLetterFromAlphabetIndex(i);
+        ss << letter << ": " << this->degree(letter) << endl;
+    }
+
+    return ss.str();
 }
 
 void Graph::addArc(char i, char j, int p) {
