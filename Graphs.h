@@ -21,7 +21,7 @@ public:
         g.addArcs('G', new int[]{ 1, 0, 0, 0 ,1, 1, 0, 1, 0, 0, 0 });
         g.addArcs('H', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 0, 0, 0 });
         g.addArcs('I', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 0, 1, 1 });
-        g.addArcs('J', new int[]{ 1, 0, 0, 0 ,0, 0, 0, 0, 1, 0, 1 });
+        g.addArcs('J', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 1, 0, 1 });
         g.addArcs('K', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 1, 1, 0 });
 
         return g;

@@ -56,7 +56,7 @@ public:
      * @param size The size of the matrix
      * @return The raw string representation of the matrix
      */
-    static string matrixToRawString(int **matrix, int size, string separator);
+    static string matrixToRawString(int **matrix, int size, const string& separator);
 
     /**
      * Get the alphabet as a string representation
@@ -64,6 +64,14 @@ public:
      * @return The alphabet letters
      */
     static string getAlphabet(int max = 26);
+
+    /**
+     * Split a string into an array of strings
+     * @param str The string to split
+     * @param delimiter The delimiter
+     * @return The split string as a vector of strings
+     */
+    static vector<string> split(string str, const string& delimiter);
 
     /**
      * Convert a boolean value to "yes" or "no"

@@ -79,10 +79,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a8dd5326dc328e8e5ff395eafe13a9b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8845ca4a5eef3df2d07891acc5413cae"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a8845ca4a5eef3df2d07891acc5413cae">matrixToStringCharVertex</a> (int **matrix, int size)</td></tr>
 <tr class="separator:a8845ca4a5eef3df2d07891acc5413cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49e221a9dd21ff2a9bc54812fc17d811"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a49e221a9dd21ff2a9bc54812fc17d811">matrixToRawString</a> (int **matrix, int size, string separator)</td></tr>
-<tr class="separator:a49e221a9dd21ff2a9bc54812fc17d811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1c49daade691c8181c65e75ba00b5e"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#aeb1c49daade691c8181c65e75ba00b5e">matrixToRawString</a> (int **matrix, int size, const string &amp;separator)</td></tr>
+<tr class="separator:aeb1c49daade691c8181c65e75ba00b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a320afe4376a3d5b000e24ab2c4539260"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a320afe4376a3d5b000e24ab2c4539260">getAlphabet</a> (int max=26)</td></tr>
 <tr class="separator:a320afe4376a3d5b000e24ab2c4539260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05231d751b507d1fe6a19f6204ca49e5"><td class="memItemLeft" align="right" valign="top">static vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a05231d751b507d1fe6a19f6204ca49e5">split</a> (string str, const string &amp;delimiter)</td></tr>
+<tr class="separator:a05231d751b507d1fe6a19f6204ca49e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74f265b26625418255606f6ccd2e1538"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utils.html#a74f265b26625418255606f6ccd2e1538">boolToYesNo</a> (bool value)</td></tr>
 <tr class="separator:a74f265b26625418255606f6ccd2e1538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3c061944240a216cbf7d62b168e0fe"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
@@ -277,8 +279,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a49e221a9dd21ff2a9bc54812fc17d811" name="a49e221a9dd21ff2a9bc54812fc17d811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49e221a9dd21ff2a9bc54812fc17d811">&#9670;&nbsp;</a></span>matrixToRawString()</h2>
+<a id="aeb1c49daade691c8181c65e75ba00b5e" name="aeb1c49daade691c8181c65e75ba00b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1c49daade691c8181c65e75ba00b5e">&#9670;&nbsp;</a></span>matrixToRawString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +303,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>separator</em>&#160;</td>
         </tr>
         <tr>
@@ -412,6 +414,50 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string representation of the matrix </dd></dl>
+
+</div>
+</div>
+<a id="a05231d751b507d1fe6a19f6204ca49e5" name="a05231d751b507d1fe6a19f6204ca49e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05231d751b507d1fe6a19f6204ca49e5">&#9670;&nbsp;</a></span>split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; Utils::split </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>delimiter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Split a string into an array of strings </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to split </td></tr>
+    <tr><td class="paramname">delimiter</td><td>The delimiter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The split string as a vector of strings </dd></dl>
 
 </div>
 </div>

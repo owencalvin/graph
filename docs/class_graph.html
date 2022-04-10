@@ -75,8 +75,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7e963f57fa2c368e79db1562112aed54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a7e963f57fa2c368e79db1562112aed54">Graph</a> (int size)</td></tr>
-<tr class="separator:a7e963f57fa2c368e79db1562112aed54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0551d4f927a43602fefa0a2a7d950685"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a0551d4f927a43602fefa0a2a7d950685">Graph</a> (unsigned int size)</td></tr>
+<tr class="separator:a0551d4f927a43602fefa0a2a7d950685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5034f7c03052583da4e7adb67d911f23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a5034f7c03052583da4e7adb67d911f23">Graph</a> (const string &amp;path)</td></tr>
+<tr class="separator:a5034f7c03052583da4e7adb67d911f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a285c64fc07f128c01bce1e3b9bd35dc7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a285c64fc07f128c01bce1e3b9bd35dc7">toStringIntVertex</a> () const</td></tr>
 <tr class="separator:a285c64fc07f128c01bce1e3b9bd35dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fbc9d480790b031e36653ebdf906202"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a2fbc9d480790b031e36653ebdf906202">toStringCharVertex</a> () const</td></tr>
@@ -136,8 +138,8 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_graph.html">Graph</a> implementation </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7e963f57fa2c368e79db1562112aed54" name="a7e963f57fa2c368e79db1562112aed54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e963f57fa2c368e79db1562112aed54">&#9670;&nbsp;</a></span>Graph()</h2>
+<a id="a0551d4f927a43602fefa0a2a7d950685" name="a0551d4f927a43602fefa0a2a7d950685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0551d4f927a43602fefa0a2a7d950685">&#9670;&nbsp;</a></span>Graph() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +150,7 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
         <tr>
           <td class="memname">Graph::Graph </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -162,6 +164,44 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 <p >Initialize a graph </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>The size of the graph </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5034f7c03052583da4e7adb67d911f23" name="a5034f7c03052583da4e7adb67d911f23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5034f7c03052583da4e7adb67d911f23">&#9670;&nbsp;</a></span>Graph() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Graph::Graph </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Initialize a graph with a descriptive file Formatted as: </p><div class="fragment"><div class="line">12</div>
+<div class="line">A G 2</div>
+<div class="line">A J 4</div>
+<div class="line">A L 3</div>
+<div class="line">B H 2</div>
+<div class="line">L J 2</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -236,9 +276,9 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Add arcs from one vertex to all the other vertices in the graph g.addArcs('A', { 0, 1, 2, 3, 4, 5 }) means: </p><pre class="fragment">A B C D E F
-</pre><p> A: 0 1 2 3 4 5</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p >Add arcs from one vertex to all the other vertices in the graph g.addArcs('A', { 0, 1, 2, 3, 4, 5 }) means: </p><div class="fragment"><div class="line">    A B C D E F</div>
+<div class="line">A:  0 1 2 3 4 5</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>The first vertex </td></tr>
     <tr><td class="paramname">weights</td><td>The weights array, must have a length of your graph size </td></tr>

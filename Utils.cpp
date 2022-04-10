@@ -3,6 +3,7 @@
 //
 
 #include <sstream>
+#include <vector>
 #include "Utils.h"
 
 string Utils::matrixToStringIntVertex(int **matrix, int size) {
@@ -71,7 +72,7 @@ string Utils::matrixToStringCharVertex(int **matrix, int size) {
     return ss.str();
 }
 
-string Utils::matrixToRawString(int **matrix, int size, string separator) {
+string Utils::matrixToRawString(int **matrix, int size, const string& separator) {
     stringstream ss;
 
     for (int i = 0; i < size; i++) {
@@ -103,6 +104,22 @@ string Utils::getAlphabet(int max) {
     }
 
     return ss.str();
+}
+
+vector<string> Utils::split(string str, const string& delimiter) {
+    size_t pos = 0;
+    std::string token;
+    vector<string> result;
+
+    while ((pos = str.find(delimiter)) != std::string::npos) {
+        token = str.substr(0, pos);
+        result.emplace_back(token);
+        str.erase(0, pos + delimiter.length());
+    }
+
+    result.emplace_back(str);
+
+    return result;
 }
 
 int Utils::getIndexInAlphabet(char letter) {

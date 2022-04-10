@@ -17,6 +17,8 @@ private:
     int **matrix;
     int size = 0;
 
+    void init(unsigned int size);
+
     void recursiveDepthFirstVertexVisit(int vertex, bool visited[], void (*f)(char)) const;
 
     void iterativeDepthFirstVertexVisit(int vertex, bool visited[], bool met[], void (*f)(char)) const;
@@ -39,7 +41,22 @@ public:
      * Initialize a graph
      * @param size The size of the graph
      */
-    explicit Graph(int size);
+    explicit Graph(unsigned int size);
+
+    /**
+     * Initialize a graph with a descriptive file
+     * Formatted as:
+     * ```
+     * 12
+     * A G 2
+     * A J 4
+     * A L 3
+     * B H 2
+     * L J 2
+     * ```
+     * @param
+     */
+    explicit Graph(const string& path);
 
     friend ostream &operator<<(ostream &os, const Graph &graph);
 
@@ -97,10 +114,10 @@ public:
     /**
      * Add arcs from one vertex to all the other vertices in the graph
      * g.addArcs('A', { 0, 1, 2, 3, 4, 5 }) means:
-     *
+     * ```
      *     A B C D E F
      * A:  0 1 2 3 4 5
-     *
+     * ```
      * @param i The first vertex
      * @param weights The weights array, must have a length of your graph size
      */

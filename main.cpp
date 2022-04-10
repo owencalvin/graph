@@ -73,5 +73,8 @@ int main() {
     printHenriqueGraph();
     printEx1();
 
+    Graph g = Graph("graphs/graph1.txt");
+    cout << g;
+
     return 0;
 }

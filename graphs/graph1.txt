@@ -1,0 +1,25 @@
+12
+A G 2
+A J 4
+A L 3
+B H 2
+B K 1
+D E 4
+D F 1
+D J 5
+E D 4
+E F 2
+E G 3
+F D 1
+F E 2
+G A 2
+G E 3
+H B 2
+H I 1
+I H 1
+J A 4
+J D 5
+J L 2
+K B 1
+L A 3
+L J 2

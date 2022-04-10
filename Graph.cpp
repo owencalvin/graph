@@ -6,13 +6,14 @@
 #include <stack>
 #include <queue>
 #include <sstream>
+#include <fstream>
 #include "Graph.h"
 #include "Utils.h"
 #include "MinHeap.h"
 
 using namespace std;
 
-Graph::Graph(int size) {
+void Graph::init(unsigned int size) {
     this->size = size;
     this->matrix = new int *[this->size];
 
@@ -23,6 +24,32 @@ Graph::Graph(int size) {
         for (int j = 0; j < this->size; j++) {
             this->matrix[i][j] = 0;
         }
+    }
+}
+
+Graph::Graph(unsigned int size) {
+    this->init(size);
+}
+
+Graph::Graph(const string& path) {
+    ifstream infile( "../" + path );
+
+    string line;
+    unsigned int count = 0;
+    while (std::getline(infile, line)) {
+        if (count <= 0) {
+            this->init(stoi(line));
+        } else {
+            vector<string> args = Utils::split(line, " ");
+
+            if (args.size() == 3) {
+                this->addArc(args[0][0], args[1][0], stoi(args[2]));
+            } else if (args.size() != 1) {
+                throw runtime_error("Your file isn't formatted correctly (" + path + ")");
+            }
+        }
+
+        count++;
     }
 }
 
@@ -371,9 +398,9 @@ void Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, vo
     mh.insert(INT32_MAX, vertex);
 
     while (!mh.empty()) {
-        pair<int, int> priority_pair = mh.extractMinimum();
-        vertex = priority_pair.second;
-        int* priority = &priority_pair.first;
+        pair<int, int> priorityPair = mh.extractMinimum();
+        vertex = priorityPair.second;
+        int* priority = &priorityPair.first;
 
         visited[vertex] = true;
 
@@ -428,9 +455,9 @@ void Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug
     mh.insert(0, vertex);
 
     while (!mh.empty()) {
-        pair<int, int> priority_pair = mh.extractMinimum();
-        vertex = priority_pair.second;
-        int* priority = &priority_pair.first;
+        pair<int, int> priorityPair = mh.extractMinimum();
+        vertex = priorityPair.second;
+        int* priority = &priorityPair.first;
 
         visited[vertex] = true;
 
