@@ -48,25 +48,6 @@ void printPrimGraph() {
     cout << endl << endl << endl;
 }
 
-void printHenriqueGraph() {
-    const Graph g = Graphs::getHenriqueGraph();
-
-    cout << "Henrique graph g:";
-    cout << g;
-
-    cout << endl << endl << endl;
-}
-
-void printEx1() {
-    const Graph g = Graphs::ex11();
-
-    cout << "Ex11 g:";
-    cout << g << endl;
-    cout << g.rawMatrixString();
-
-    cout << endl << endl << endl;
-}
-
 void printFileGraphs() {
     Graph g = Graph("graphs/graph1.txt");
 
@@ -88,14 +69,20 @@ void printFileGraphs() {
     cout << endl << "Iterative priority first (=== breadth first): ";
     g.iterativePriorityFirstSearch(1);
 
+    cout << endl << endl << "Prim: " << endl;
+    int primWeight = g.prim(true);
+    cout << "Prim total weight: " << primWeight << endl;
+
+    cout << endl << endl << "Dijkstra: " << endl;
+    int dijkstraWeight = g.dijkstra(true);
+    cout << "Dijkstra total weight: " << dijkstraWeight << endl;
+
     cout << endl << endl << endl;
 }
 
 int main() {
     printBasicGraph();
     printPrimGraph();
-    printHenriqueGraph();
-    printEx1();
     printFileGraphs();
 
     return 0;

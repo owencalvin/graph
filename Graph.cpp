@@ -379,34 +379,40 @@ void Graph::iterativePriorityFirstVertexVisit(int vertex, bool *visited, bool *m
 
 // region Prim
 
-void Graph::prim(bool debug, void (*f)(char)) const {
+int Graph::prim(bool debug, void (*f)(char)) const {
     bool *visited = Utils::initArray(false, this->size);
     bool *met = Utils::initArray(false, this->size);
+    int weight = 0;
 
     for (int i = 0; i < this->size; i++) {
-        this->primVertexVisit(i, visited, met, debug, f);
+        weight += this->primVertexVisit(i, visited, met, debug, f);
     }
 
     delete[] visited;
     delete[] met;
+
+    return weight;
 }
 
-void Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, void (*f)(char)) const {
+int Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, void (*f)(char)) const {
+    int weight = 0;
+
     if (visited[vertex]) {
-        return;
+        return weight;
     }
 
     MinHeap mh;
-    mh.insert(INT32_MAX, vertex);
+    mh.insert(0, vertex);
 
     while (!mh.empty()) {
         pair<int, int> priorityPair = mh.extractMinimum();
         vertex = priorityPair.second;
-        int* priority = &priorityPair.first;
+        int priority = priorityPair.first;
 
         visited[vertex] = true;
 
         if (f != nullptr) {
+            weight += priority;
             f(Utils::getLetterFromAlphabetIndex(vertex));
         }
 
@@ -418,7 +424,7 @@ void Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, vo
                     if (!met[i]) {
                         mh.insert(newPriority, i);
                         met[i] = true;
-                    } else if (newPriority < *priority) {
+                    } else if (newPriority < priority) {
                         mh.decreasePriority(mh.getIndexByValue(i), newPriority);
                     }
                 }
@@ -429,25 +435,31 @@ void Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, vo
             cout << mh << endl;
         }
     }
+
+    return weight;
 }
 
 // endregion
 
 // region Dijkstra
 
-void Graph::dijkstra(bool debug, void (*f)(char)) const {
+int Graph::dijkstra(bool debug, void (*f)(char)) const {
     bool *visited = Utils::initArray<bool>(false, this->size);
     bool *met = Utils::initArray<bool>(false, this->size);
 
-    dijkstraVertexVisit(0, visited, met, debug, f);
+    int weight = dijkstraVertexVisit(0, visited, met, debug, f);
 
     delete[] visited;
     delete[] met;
+
+    return weight;
 }
 
-void Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug, void (*f)(char)) const {
+int Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug, void (*f)(char)) const {
+    int weight = 0;
+
     if (visited[vertex]) {
-        return;
+        return weight;
     }
 
     MinHeap mh;
@@ -456,11 +468,12 @@ void Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug
     while (!mh.empty()) {
         pair<int, int> priorityPair = mh.extractMinimum();
         vertex = priorityPair.second;
-        int* priority = &priorityPair.first;
+        int priority = priorityPair.first;
 
         visited[vertex] = true;
 
         if (f != nullptr) {
+            weight += priority;
             f(Utils::getLetterFromAlphabetIndex(vertex));
         }
 
@@ -468,7 +481,7 @@ void Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug
             if (this->matrix[vertex][i] != 0) {
                 if (!visited[i]) {
                     int currentPriority = this->matrix[vertex][i];
-                    int newPriority = *priority + this->matrix[vertex][i];
+                    int newPriority = priority + this->matrix[vertex][i];
 
                     if (!met[i]) {
                         mh.insert(newPriority, i);
@@ -484,6 +497,8 @@ void Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug
             cout << mh << endl;
         }
     }
+
+    return weight;
 }
 
 // endregion

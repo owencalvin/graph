@@ -66,23 +66,4 @@ public:
 
         return g;
     }
-
-    static Graph getHenriqueGraph() {
-        Graph g = Graph(12);
-
-        g.addArc('A', 'G', 2);
-        g.addArc('A', 'J', 4);
-        g.addArc('A', 'L', 3);
-        g.addArc('B', 'H', 2);
-        g.addArc('B', 'K', 1);
-        g.addArc('D', 'E', 4);
-        g.addArc('D', 'J', 5);
-        g.addArc('D', 'F', 1);
-        g.addArc('E', 'F', 2);
-        g.addArc('E', 'G', 3);
-        g.addArc('H', 'I', 1);
-        g.addArc('J', 'L', 2);
-
-        return g;
-    }
 };

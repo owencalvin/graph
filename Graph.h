@@ -28,9 +28,9 @@ private:
     void iterativePriorityFirstVertexVisit(int vertex, bool visited[], bool met[], void (*f)(char), int *priorityBase,
                                            int priority) const;
 
-    void primVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char)) const;
+    int primVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char)) const;
 
-    void dijkstraVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char)) const;
+    int dijkstraVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char)) const;
 
     int visitConnectedVertex(int vertex, int mark[], int *n, stack<int> *q, void (*f)(vector<char>)) const;
 
@@ -187,15 +187,17 @@ public:
      * Prim tree algorithm
      * @param debug Print the neighbour vertices with their priority at each iteration
      * @param f The function that operate on the vertex (example: printing the vertex)
+     * @return The total weight of the path
      */
-    void prim(bool debug = false, void (*f)(char) = Graph::printVertex) const;
+    int prim(bool debug = false, void (*f)(char) = Graph::printVertex) const;
 
     /**
      * Dijkstra tree algorithm
      * @param debug Print the neighbour vertices with their priority at each iteration
      * @param f The function that operate on the vertex (example: printing the vertex)
+     * @return The total weight of the path
      */
-    void dijkstra(bool debug = false, void (*f)(char) = Graph::printVertex) const;
+    int dijkstra(bool debug = false, void (*f)(char) = Graph::printVertex) const;
 
     /**
      * TO-FIX: Do not work properly

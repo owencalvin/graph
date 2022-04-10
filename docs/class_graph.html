@@ -115,10 +115,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5dd3d4703cf39abae764c1138bee8945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8850a36471e1bfb94661036240861f50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8850a36471e1bfb94661036240861f50">iterativePriorityFirstSearch</a> (int priority=-1, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
 <tr class="separator:a8850a36471e1bfb94661036240861f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76db65c9541a5b748a059911efa72629"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a76db65c9541a5b748a059911efa72629">prim</a> (bool debug=false, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
-<tr class="separator:a76db65c9541a5b748a059911efa72629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05b68b6236714d45d9e8862bff3c354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ad05b68b6236714d45d9e8862bff3c354">dijkstra</a> (bool debug=false, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
-<tr class="separator:ad05b68b6236714d45d9e8862bff3c354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d5895a10b89f36ed47b05cd8920eba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a67d5895a10b89f36ed47b05cd8920eba">prim</a> (bool debug=false, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
+<tr class="separator:a67d5895a10b89f36ed47b05cd8920eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d4c52330e1af9be4df780f675b2566"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ae4d4c52330e1af9be4df780f675b2566">dijkstra</a> (bool debug=false, void(*f)(char)=<a class="el" href="class_graph.html#a87e28713b6fd2ccb3acafc64c603d9cd">Graph::printVertex</a>) const</td></tr>
+<tr class="separator:ae4d4c52330e1af9be4df780f675b2566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29af32108929c0ea70f7fed63f399ac5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a29af32108929c0ea70f7fed63f399ac5">connectedVertices</a> (void(*f)(vector&lt; char &gt;)=<a class="el" href="class_graph.html#af412a7e1194d902dc827250dade10f02">Graph::printVertices</a>) const</td></tr>
 <tr class="separator:a29af32108929c0ea70f7fed63f399ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -397,14 +397,14 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 
 </div>
 </div>
-<a id="ad05b68b6236714d45d9e8862bff3c354" name="ad05b68b6236714d45d9e8862bff3c354"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad05b68b6236714d45d9e8862bff3c354">&#9670;&nbsp;</a></span>dijkstra()</h2>
+<a id="ae4d4c52330e1af9be4df780f675b2566" name="ae4d4c52330e1af9be4df780f675b2566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d4c52330e1af9be4df780f675b2566">&#9670;&nbsp;</a></span>dijkstra()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Graph::dijkstra </td>
+          <td class="memname">int Graph::dijkstra </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>debug</em> = <code>false</code>, </td>
@@ -429,6 +429,7 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The total weight of the path </dd></dl>
 
 </div>
 </div>
@@ -623,14 +624,14 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
 
 </div>
 </div>
-<a id="a76db65c9541a5b748a059911efa72629" name="a76db65c9541a5b748a059911efa72629"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76db65c9541a5b748a059911efa72629">&#9670;&nbsp;</a></span>prim()</h2>
+<a id="a67d5895a10b89f36ed47b05cd8920eba" name="a67d5895a10b89f36ed47b05cd8920eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d5895a10b89f36ed47b05cd8920eba">&#9670;&nbsp;</a></span>prim()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Graph::prim </td>
+          <td class="memname">int Graph::prim </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>debug</em> = <code>false</code>, </td>
@@ -655,6 +656,7 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The total weight of the path </dd></dl>
 
 </div>
 </div>
