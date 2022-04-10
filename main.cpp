@@ -67,14 +67,22 @@ void printEx1() {
     cout << endl << endl << endl;
 }
 
+void printFileGraphs() {
+    Graph g = Graph("graphs/graph1.txt");
+    cout << g;
+    cout << endl << endl << endl;
+
+    Graph g2 = Graph("graphs/graph2.txt");
+    cout << g2;
+    cout << endl << endl << endl;
+}
+
 int main() {
     printBasicGraph();
     printPrimGraph();
     printHenriqueGraph();
     printEx1();
-
-    Graph g = Graph("graphs/graph1.txt");
-    cout << g;
+    printFileGraphs();
 
     return 0;
 }

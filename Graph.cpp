@@ -39,12 +39,14 @@ Graph::Graph(const string& path) {
     while (std::getline(infile, line)) {
         if (count <= 0) {
             this->init(stoi(line));
-        } else {
+        } else if (line.length() != 0) {
             vector<string> args = Utils::split(line, " ");
 
             if (args.size() == 3) {
-                this->addArc(args[0][0], args[1][0], stoi(args[2]));
-            } else if (args.size() != 1) {
+                this->addOrientedGraph(args[0][0], args[1][0], stoi(args[2]));
+            } else if (args.size() == 2) {
+                this->addOrientedGraph(args[0][0], args[1][0], 1);
+            } else {
                 throw runtime_error("Your file isn't formatted correctly (" + path + ")");
             }
         }
