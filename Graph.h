@@ -150,7 +150,6 @@ public:
      */
     bool isDirected() const;
 
-
     /**
      * If only one of the arc in the matrix is greater or less than 1 (or -1) then the graph is considered as weighted
      * @return True if the arc is weighted

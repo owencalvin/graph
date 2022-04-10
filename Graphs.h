@@ -12,17 +12,18 @@ public:
     static Graph ex11() {
         Graph g = Graph(11);
 
-        g.addArcs('A', new int[]{ 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0 });
-        g.addArcs('B', new int[]{ 1, 0, 0, 0 ,0, 0, 0, 0, 0, 0, 0 });
-        g.addArcs('C', new int[]{ 1, 0, 0, 0 ,0, 0, 0, 1, 0, 1, 0 });
-        g.addArcs('D', new int[]{ 0, 0, 0, 0 ,1, 1, 0, 0, 0, 0, 0 });
-        g.addArcs('E', new int[]{ 0, 0, 0, 1 ,0, 1, 1, 0, 0, 0, 0 });
-        g.addArcs('F', new int[]{ 1, 0, 0, 1 ,1, 0, 1, 0, 0, 0, 0 });
-        g.addArcs('G', new int[]{ 1, 0, 0, 0 ,1, 1, 0, 1, 0, 0, 0 });
-        g.addArcs('H', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 0, 0, 0 });
-        g.addArcs('I', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 0, 1, 1 });
-        g.addArcs('J', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 1, 0, 1 });
-        g.addArcs('K', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 1, 1, 0 });
+        // Might cause error on some compilers
+        // g.addArcs('A', new int[]{ 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0 });
+        // g.addArcs('B', new int[]{ 1, 0, 0, 0 ,0, 0, 0, 0, 0, 0, 0 });
+        // g.addArcs('C', new int[]{ 1, 0, 0, 0 ,0, 0, 0, 1, 0, 1, 0 });
+        // g.addArcs('D', new int[]{ 0, 0, 0, 0 ,1, 1, 0, 0, 0, 0, 0 });
+        // g.addArcs('E', new int[]{ 0, 0, 0, 1 ,0, 1, 1, 0, 0, 0, 0 });
+        // g.addArcs('F', new int[]{ 1, 0, 0, 1 ,1, 0, 1, 0, 0, 0, 0 });
+        // g.addArcs('G', new int[]{ 1, 0, 0, 0 ,1, 1, 0, 1, 0, 0, 0 });
+        // g.addArcs('H', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 0, 0, 0 });
+        // g.addArcs('I', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 0, 1, 1 });
+        // g.addArcs('J', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 1, 0, 1 });
+        // g.addArcs('K', new int[]{ 0, 0, 0, 0 ,0, 0, 0, 0, 1, 1, 0 });
 
         return g;
     }
