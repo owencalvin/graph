@@ -141,6 +141,22 @@ void Graph::addOrientedArc(char i, char j, int p) {
     this->matrix[iInt][jInt] = p;
 }
 
+int Graph::getWeight() const {
+    int weight = 0;
+
+    for (int i = 0; i < this->size; i++) {
+        for (int j = 0; j < this->size; j++) {
+            weight += this->matrix[i][j];
+        }
+    }
+
+    if (this->isDirected()) {
+        return weight / 2;
+    }
+
+    return weight;
+}
+
 int Graph::degree(char i) const {
     const unsigned int iInt = Utils::getIndexInAlphabet(i);
 
@@ -150,6 +166,22 @@ int Graph::degree(char i) const {
     // => If the weight of the arc between i and j is greater than zero then they are connected
     for (int j = 0; j < this->size; ++j) {
         if (this->matrix[iInt][j] > 0) {
+            deg++;
+        }
+    }
+
+    return deg;
+}
+
+int Graph::inDegree(char i) const {
+    const unsigned int iInt = Utils::getIndexInAlphabet(i);
+
+    int deg = 0;
+
+    // Count the number of vertices that are connected the selected vertex
+    // => If the weight of the arc between i and j is greater than zero then they are connected
+    for (int j = 0; j < this->size; ++j) {
+        if (this->matrix[j][iInt] > 0) {
             deg++;
         }
     }

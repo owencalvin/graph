@@ -8,6 +8,7 @@ var searchData=
   ['getmatrix_5',['getMatrix',['../class_graph.html#ab7136b110ea62bec413f2d359f2b6dfe',1,'Graph']]],
   ['getreferencebyvalue_6',['getReferenceByValue',['../class_min_heap.html#a009665cd3ea2f78533e7e9d1135dee40',1,'MinHeap']]],
   ['getsize_7',['getSize',['../class_graph.html#abe53f5d640fd633e100aa77c6e714f41',1,'Graph::getSize()'],['../class_min_heap.html#aeedc74cc56233e7f66a4ddd50479d3ac',1,'MinHeap::getSize()']]],
-  ['graph_8',['Graph',['../class_graph.html',1,'Graph'],['../class_graph.html#a0551d4f927a43602fefa0a2a7d950685',1,'Graph::Graph(unsigned int size)'],['../class_graph.html#a5034f7c03052583da4e7adb67d911f23',1,'Graph::Graph(const string &amp;path)'],['../index.html',1,'(Global Namespace)']]],
-  ['graphs_9',['Graphs',['../class_graphs.html',1,'']]]
+  ['getweight_8',['getWeight',['../class_graph.html#a06bd943cfdabaf61832003935fab87ab',1,'Graph']]],
+  ['graph_9',['Graph',['../class_graph.html',1,'Graph'],['../class_graph.html#a0551d4f927a43602fefa0a2a7d950685',1,'Graph::Graph(unsigned int size)'],['../class_graph.html#a5034f7c03052583da4e7adb67d911f23',1,'Graph::Graph(const string &amp;path)'],['../index.html',1,'(Global Namespace)']]],
+  ['graphs_10',['Graphs',['../class_graphs.html',1,'']]]
 ];

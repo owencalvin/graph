@@ -132,11 +132,24 @@ public:
     void addOrientedArc(char i, char j, int p = 1);
 
     /**
-     * Get the degree of a vertex
+     * Get the total weight of the graph
+     * @return The weight of the graph
+     */
+    int getWeight() const;
+
+    /**
+     * Get the "out degree" of a vertex
      * @param i The vertex ID
      * @return The degree of the vertex
      */
     int degree(char i) const;
+
+    /**
+     * Get the "in degree" of a vertex
+     * @param i The vertex ID
+     * @return The degree of the vertex
+     */
+    int inDegree(char i) const;
 
     /**
      * Determine if the graph is connected or not

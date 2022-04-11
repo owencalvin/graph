@@ -99,8 +99,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a34c9ab7622b0a617d6b4c99ac4d226a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e4abfec858ce79e2e79a0bc8d50e6c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a6e4abfec858ce79e2e79a0bc8d50e6c5">addOrientedArc</a> (char i, char j, int p=1)</td></tr>
 <tr class="separator:a6e4abfec858ce79e2e79a0bc8d50e6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06bd943cfdabaf61832003935fab87ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a06bd943cfdabaf61832003935fab87ab">getWeight</a> () const</td></tr>
+<tr class="separator:a06bd943cfdabaf61832003935fab87ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fbda479ac96ef1469b45deaad654ecd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a3fbda479ac96ef1469b45deaad654ecd">degree</a> (char i) const</td></tr>
 <tr class="separator:a3fbda479ac96ef1469b45deaad654ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cb4d0e568c9634e85f6dad49e32b96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a33cb4d0e568c9634e85f6dad49e32b96">inDegree</a> (char i) const</td></tr>
+<tr class="separator:a33cb4d0e568c9634e85f6dad49e32b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aded2431bddc4c277db7ac08da4486179"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aded2431bddc4c277db7ac08da4486179">isConnected</a> () const</td></tr>
 <tr class="separator:aded2431bddc4c277db7ac08da4486179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08b970ecb424505f85c4f9d632b5ab01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a08b970ecb424505f85c4f9d632b5ab01">isDirected</a> () const</td></tr>
@@ -371,7 +375,7 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Get the degree of a vertex </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Get the "out degree" of a vertex </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>The vertex ID </td></tr>
   </table>
@@ -493,6 +497,49 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
       </table>
 </div><div class="memdoc">
 <p >Get the size of your graph </p><dl class="section return"><dt>Returns</dt><dd>The size of your graph </dd></dl>
+
+</div>
+</div>
+<a id="a06bd943cfdabaf61832003935fab87ab" name="a06bd943cfdabaf61832003935fab87ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06bd943cfdabaf61832003935fab87ab">&#9670;&nbsp;</a></span>getWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::getWeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the total weight of the graph </p><dl class="section return"><dt>Returns</dt><dd>The weight of the graph </dd></dl>
+
+</div>
+</div>
+<a id="a33cb4d0e568c9634e85f6dad49e32b96" name="a33cb4d0e568c9634e85f6dad49e32b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33cb4d0e568c9634e85f6dad49e32b96">&#9670;&nbsp;</a></span>inDegree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::inDegree </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the "in degree" of a vertex </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>The vertex ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The degree of the vertex </dd></dl>
 
 </div>
 </div>
