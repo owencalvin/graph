@@ -42,7 +42,7 @@ void printGraph(const Graph& g) {
 }
 
 int main() {
-    Graph g = Graph("graphs/graph1.txt");
+    Graph g = Graph("../graphs/graph1.txt");
     printGraph(g);
 
     return 0;

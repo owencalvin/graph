@@ -32,7 +32,11 @@ Graph::Graph(unsigned int size) {
 }
 
 Graph::Graph(const string& path) {
-    ifstream infile( "../" + path );
+    ifstream infile(path);
+
+    if (!infile) {
+        throw runtime_error("File " + path + " couldn't be opened");
+    }
 
     string line;
     unsigned int count = 0;
