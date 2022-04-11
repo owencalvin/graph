@@ -123,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeefdf475f9cd721a461d2db18707cb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d4acaa4714573d51465e512ceb79d9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a0d4acaa4714573d51465e512ceb79d9e">dijkstra</a> (char startingVertex='A', bool debug=false, void(*f)(char, int)=<a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">Graph::printVertexWithWeight</a>) const</td></tr>
 <tr class="separator:a0d4acaa4714573d51465e512ceb79d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c8a9dbf674f4f7d8661a4dc620a60b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a93c8a9dbf674f4f7d8661a4dc620a60b">dijkstraMax</a> (char startingVertex='A', bool debug=false, void(*f)(char, int)=<a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">Graph::printVertexWithWeight</a>) const</td></tr>
+<tr class="separator:a93c8a9dbf674f4f7d8661a4dc620a60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29af32108929c0ea70f7fed63f399ac5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a29af32108929c0ea70f7fed63f399ac5">connectedVertices</a> (void(*f)(vector&lt; char &gt;)=<a class="el" href="class_graph.html#af412a7e1194d902dc827250dade10f02">Graph::printVertices</a>) const</td></tr>
 <tr class="separator:a29af32108929c0ea70f7fed63f399ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -435,6 +437,49 @@ ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;
       </table>
 </div><div class="memdoc">
 <p >Dijkstra tree algorithm </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startingVertex</td><td>Specify the vertex where the algorithm should start </td></tr>
+    <tr><td class="paramname">debug</td><td>Print the neighbour vertices with their priority at each iteration </td></tr>
+    <tr><td class="paramname">f</td><td>The function that operate on the vertex (example: printing the vertex) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total weight of the path </dd></dl>
+
+</div>
+</div>
+<a id="a93c8a9dbf674f4f7d8661a4dc620a60b" name="a93c8a9dbf674f4f7d8661a4dc620a60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c8a9dbf674f4f7d8661a4dc620a60b">&#9670;&nbsp;</a></span>dijkstraMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::dijkstraMax </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>startingVertex</em> = <code>'A'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>debug</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(char, int)&#160;</td>
+          <td class="paramname"><em>f</em> = <code><a class="el" href="class_graph.html#a2f1ee698b4bc48ffb646abc27288ffdc">Graph::printVertexWithWeight</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Dijkstra max tree algorithm (longest path) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">startingVertex</td><td>Specify the vertex where the algorithm should start </td></tr>
     <tr><td class="paramname">debug</td><td>Print the neighbour vertices with their priority at each iteration </td></tr>

@@ -32,6 +32,8 @@ private:
 
     int dijkstraVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int)) const;
 
+    int dijkstraMaxVertexVisit(int vertex, bool visited[], bool met[], bool debug, void (*f)(char, int)) const;
+
     int visitConnectedVertex(int vertex, int mark[], int *n, stack<int> *q, void (*f)(vector<char>)) const;
 
 public:
@@ -211,6 +213,15 @@ public:
      * @return The total weight of the path
      */
     int dijkstra(char startingVertex = 'A', bool debug = false, void (*f)(char, int) = Graph::printVertexWithWeight) const;
+
+    /**
+     * Dijkstra max tree algorithm (longest path)
+     * @param startingVertex Specify the vertex where the algorithm should start
+     * @param debug Print the neighbour vertices with their priority at each iteration
+     * @param f The function that operate on the vertex (example: printing the vertex)
+     * @return The total weight of the path
+     */
+    int dijkstraMax(char startingVertex = 'A', bool debug = false, void (*f)(char, int) = Graph::printVertexWithWeight) const;
 
     /**
      * TO-FIX: Do not work properly

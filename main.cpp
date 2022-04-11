@@ -41,6 +41,10 @@ void printGraph(const Graph& g) {
     int dijkstraWeight = g.dijkstra('A', true);
     cout << "Dijkstra total weight: " << dijkstraWeight << endl;
 
+    cout << endl << "Dijkstra max: " << endl;
+    dijkstraWeight = g.dijkstraMax('A', true);
+    cout << "Dijkstra max total weight: " << dijkstraWeight << endl;
+
     cout << endl << "Raw matrix (https://graphonline.ru/en/create_graph_by_matrix): " << endl << g.rawMatrixString();
 
     cout << endl << endl;

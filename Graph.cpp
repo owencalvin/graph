@@ -539,6 +539,68 @@ int Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug,
 
 // endregion
 
+// region Dijkstra max
+
+int Graph::dijkstraMax(char startingVertex, bool debug, void (*f)(char, int)) const {
+    bool *visited = Utils::initArray<bool>(false, this->size);
+    bool *met = Utils::initArray<bool>(false, this->size);
+
+    int weight = dijkstraMaxVertexVisit(Utils::getIndexInAlphabet(startingVertex), visited, met, debug, f);
+
+    delete[] visited;
+    delete[] met;
+
+    return weight;
+}
+
+int Graph::dijkstraMaxVertexVisit(int vertex, bool *visited, bool* met, bool debug, void (*f)(char, int)) const {
+    int weight = 0;
+
+    if (visited[vertex]) {
+        return weight;
+    }
+
+    MinHeap mh;
+    mh.insert(0, vertex);
+
+    while (!mh.empty()) {
+        pair<int, int> priorityPair = mh.extractMinimum();
+        vertex = priorityPair.second;
+        int priority = priorityPair.first;
+
+        visited[vertex] = true;
+        weight += -priority;
+
+        if (f != nullptr) {
+            f(Utils::getLetterFromAlphabetIndex(vertex), -priority);
+        }
+
+        for (int i = 0; i < this->size; i++) {
+            if (this->matrix[vertex][i] != 0) {
+                if (!visited[i]) {
+                    int currentPriority = mh.getReferenceByValue(i)->first;
+                    int newPriority = priority - this->matrix[vertex][i];
+
+                    if (!met[i]) {
+                        mh.insert(newPriority, i);
+                        met[i] = true;
+                    } else if (newPriority > currentPriority) {
+                        mh.decreasePriority(mh.getIndexByValue(i), newPriority);
+                    }
+                }
+            }
+        }
+
+        if (debug) {
+            cout << mh << endl;
+        }
+    }
+
+    return weight;
+}
+
+// endregion
+
 // region Connected vertices
 
 void Graph::connectedVertices(void (*f)(vector<char>)) const {
