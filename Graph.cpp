@@ -446,9 +446,9 @@ int Graph::primVertexVisit(int vertex, bool *visited, bool *met, bool debug, voi
         int priority = priorityPair.first;
 
         visited[vertex] = true;
+        weight += priority;
 
         if (f != nullptr) {
-            weight += priority;
             f(Utils::getLetterFromAlphabetIndex(vertex), priority);
         }
 
@@ -507,9 +507,9 @@ int Graph::dijkstraVertexVisit(int vertex, bool *visited, bool* met, bool debug,
         int priority = priorityPair.first;
 
         visited[vertex] = true;
+        weight += priority;
 
         if (f != nullptr) {
-            weight += priority;
             f(Utils::getLetterFromAlphabetIndex(vertex), priority);
         }
 
