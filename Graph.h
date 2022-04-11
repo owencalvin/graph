@@ -85,7 +85,7 @@ public:
      * @param separator The separator between each values
      * @return The raw string matrix
      */
-    string rawMatrixString(string separator = ",") const;
+    string rawMatrixString(const string& separator = ",") const;
 
     /**
      * Get the degrees representation for each vertex as a string

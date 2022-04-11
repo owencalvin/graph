@@ -99,7 +99,7 @@ string Graph::getInfos() const {
     return ss.str();
 }
 
-string Graph::rawMatrixString(string separator) const {
+string Graph::rawMatrixString(const string& separator) const {
     return Utils::matrixToRawString(this->matrix, this->size, separator);
 }
 
@@ -190,10 +190,10 @@ int Graph::inDegree(char i) const {
 }
 
 bool Graph::isWeighted() const {
-    // If only one of the arc in the matrix is greater or less than 1 (or -1) then the graph is considered as weighted
+    // If only one of the arc in the matrix is different than 1 or 0 then the graph is considered as weighted
     for (int i = 0; i < this->size; i++) {
         for (int j = 0; j < this->size; ++j) {
-            if (abs(this->matrix[i][j]) != 1) {
+            if (this->matrix[i][j] != 1 && this->matrix[i][j] != 0) {
                 return true;
             }
         }
