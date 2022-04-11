@@ -151,10 +151,10 @@ int Graph::getWeight() const {
     }
 
     if (this->isDirected()) {
-        return weight / 2;
+        return weight;
     }
 
-    return weight;
+    return weight / 2;
 }
 
 int Graph::degree(char i) const {

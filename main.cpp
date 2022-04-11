@@ -11,7 +11,12 @@
 using namespace std;
 
 void printGraph(const Graph& g) {
-    cout << g << endl << endl;
+    cout << g << endl;
+
+    cout << "Total weight: ";
+    cout << g.getWeight();
+
+    cout << endl << endl;
 
     cout << "Recursive depth first: ";
     g.recursiveDepthFirstSearch();
